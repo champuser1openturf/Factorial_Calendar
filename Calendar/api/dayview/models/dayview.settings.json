@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dayviews",
+  "info": {
+    "name": "dayview",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "day_status": {
+      "type": "string",
+      "required": true,
+      "default": "All Day"
+    }
+  }
+}

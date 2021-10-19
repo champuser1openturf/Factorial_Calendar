@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dayviews",
+      "handler": "dayview.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dayviews/count",
+      "handler": "dayview.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dayviews/:id",
+      "handler": "dayview.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dayviews",
+      "handler": "dayview.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dayviews/:id",
+      "handler": "dayview.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dayviews/:id",
+      "handler": "dayview.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

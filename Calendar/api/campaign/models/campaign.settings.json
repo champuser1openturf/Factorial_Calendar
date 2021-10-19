@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaigns",
+  "info": {
+    "name": "Campaign",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "campaigntitle": {
+      "type": "string"
+    },
+    "campaignlogo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "published": {
+      "type": "datetime",
+      "unique": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "scheduled",
+        "activated",
+        "paused",
+        "partially",
+        "published",
+        "completed",
+        "aborted",
+        "recurring",
+        "publishing"
+      ],
+      "default": "scheduled"
+    },
+    "day_view": {
+      "type": "string",
+      "required": true,
+      "default": "All Day"
+    },
+    "time_slot": {
+      "type": "datetime"
+    }
+  }
+}
